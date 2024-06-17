@@ -1,0 +1,22 @@
+html {
+  margin: 1rem
+}
+
+label {
+  margin-left: 1rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  width: 25%; /* Adjust this percentage to make columns equal */
+}
