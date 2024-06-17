@@ -17,9 +17,6 @@ function filter_interests() {
 }
 
 function buildStudents(studs) {
-	// TODO This function is just a suggestion! I would suggest calling it after
-	//      fetching the data or performing a search. It should populate the
-	//      index.html with student data by using createElement and appendChild.
 	const numStudents = document.getElementById('num-results');
     numStudents.innerText = studs.length;
     const container = document.getElementById('students');
@@ -87,7 +84,7 @@ fetch('https://cs571.org/api/s24/hw2/students', {
 	buildStudents(data);
 	console.log(data); // for debugging
 })
-.catch(error => console.error(error)) // print errors
+.catch(error => console.error(error)) 
 
 
 
@@ -97,8 +94,7 @@ function containsSubstring(string, query) {
 }
 
 function handleSearch(e) {
-	e?.preventDefault(); // You can ignore this; prevents the default form submission!
-	// TODO Implement the search
+	e?.preventDefault(); 
 	const major = document.getElementById('search-major').value;
 	const name = document.getElementById('search-name').value;
 	const numStudents = document.getElementById('num-results');
@@ -116,7 +112,7 @@ function handleSearch(e) {
 		filtered = data.filter(item => containsSubstring(item.major, major) && containsSubstring(item.name.first + ' ' + item.name.last , name));
 		buildStudents(filtered);
 	})
-	.catch(error => console.error(error)) // print errors
+	.catch(error => console.error(error)) 
 }
 
 document.getElementById('search-btn').addEventListener('click', handleSearch);
