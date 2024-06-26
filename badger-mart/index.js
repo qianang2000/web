@@ -1,8 +1,3 @@
-// !!! STOP !!!
-// You should not need to modify anything below.
-// See Step 9 for using your Badger ID to get today's feature,
-// there is no code for you to do beyond here!
-
 fetch("https://cs571.org/api/s24/hw1/featured-sale-item", {
 	headers: {
 		"X-CS571-ID": CS571.getBadgerId()
