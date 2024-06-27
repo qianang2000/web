@@ -19,9 +19,14 @@ export default function BadgerMart(props) {
         })
     }, [])
 
+
+    const featuredItems = saleItems.filter(item => item.featured == true);
+    const featuredItemName = featuredItems.map(item => item.name)[0];
+    const featuredItemPrice = featuredItems.map(item => item.price)[0];
     return <div>
         <h1>Badger Mart</h1>
         <p>Welcome to our small-town mini mart located in Madison, WI!</p>
+        <p>Today's featured item is {featuredItemName} for ${featuredItemPrice}!</p>
         <Container>
             <Row>
             {
